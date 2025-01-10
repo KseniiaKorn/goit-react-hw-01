@@ -1,4 +1,4 @@
-import styles from './Profile.css'
+import styles from './Profile.module.css'
 import PropTypes from 'prop-types';
 
 const Profile = ({ name, tag, location, image, stats }) => {
@@ -12,22 +12,22 @@ const Profile = ({ name, tag, location, image, stats }) => {
                 <p className={styles.userName}>{name}</p>
                 <p className={styles.userTag}>@{tag}</p>
                 <p className={styles.userLocation}>{location}</p>
-            </div>
 
-            <ul>
-                <li>
+            <ul className={styles.activityList}>
+                <li className={styles.activityItem}>
                     <span>Followers</span>
-                    <span>{stats.followers}</span>
+                    <span className={styles.actText}>{stats.followers}</span>
                 </li>
-                <li>
+                <li className={styles.activityItem}>
                     <span>Views</span>
-                    <span>{stats.views}</span>
+                    <span className={styles.actText}>{stats.views}</span>
                 </li>
-                <li>
+                <li className={styles.activityItem}>
                     <span>Likes</span>
-                    <span>{stats.likes}</span>
+                    <span className={styles.actText}>{stats.likes}</span>
                 </li>
-            </ul>
+                </ul>
+                </div>
         </div>
 
     );

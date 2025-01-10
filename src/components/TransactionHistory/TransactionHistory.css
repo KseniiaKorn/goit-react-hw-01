@@ -1,0 +1,35 @@
+.transaction-history-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.transaction-history {
+    margin-top: 40px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transaction-history-box-title {
+    background-color: rgb(25, 25, 25);
+    color: rgb(232, 226, 226);
+    font-size: 20px;
+}
+
+.transaction-history-title,
+.transaction-history-cells {
+    padding: 10px;
+    border: 2px solid #0f0f0f;
+    text-align: center;
+}
+
+.transaction-history-cells {
+    font-size: 18px;
+    font-weight: 600;
+    color: #171616;
+}
+
+.transaction-history-key:nth-child(even) {
+    background-color: #d9d7e3;
+}
