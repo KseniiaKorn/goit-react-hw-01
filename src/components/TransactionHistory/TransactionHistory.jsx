@@ -1,23 +1,23 @@
 import PropTypes from "prop-types";
-import './TransactionHistory.css'
+import styles from './TransactionHistory.module.css'
 
 const TransactionHistory = ({ items }) => {
     return (
-        <div className="transaction-history-container">
-            <table className="transaction-history">
-                <thead className="transaction-history-box-title">
+        <div className={styles.transactionHistoryContainer}>
+            <table className={styles.transactionHistory}>
+                <thead className={styles.transactionHistoryBoxTitle}>
                     <tr>
-                        <th className="transaction-history-title">Type</th>
-                        <th className="transaction-history-title">Amount</th>
-                        <th className="transaction-history-title">Currency</th>
+                        <th className={styles.transactionHistoryTitle}>Type</th>
+                        <th className={styles.transactionHistoryTitle}>Amount</th>
+                        <th className={styles.transactionHistoryTitle}>Currency</th>
                     </tr>
                 </thead>
                 <tbody>
                 {items.map(({ id, type, amount, currency }) => (
-                    <tr className="transaction-history-key" key={id}>
-                        <td className="transaction-history-cells">{type.charAt(0).toUpperCase() + type.slice(1)}</td>
-                        <td className="transaction-history-cells">{amount}</td>
-                        <td className="transaction-history-cells">{currency}</td>
+                    <tr className={styles.transactionHistoryKey} key={id}>
+                        <td className={styles.transactionHistoryCells}>{type.charAt(0).toUpperCase() + type.slice(1)}</td>
+                        <td className={styles.transactionHistoryCells}>{amount}</td>
+                        <td className={styles.transactionHistoryCells}>{currency}</td>
                         </tr>
                 ))}
                 </tbody>
